@@ -4,7 +4,7 @@ class Guesser {
 
     int guessingNumber(){
         Scanner s = new Scanner(System.in);
-        System.out.println("Guesser! kindly guess the Number between 1 to 100");
+        System.out.println("Guesser! kindly guess the Number between 1 to 10");
         guessNum = s.nextInt();
         return guessNum;
     }
@@ -31,7 +31,7 @@ class Umpire {
         numFromGuesser = g.guessingNumber();
     }
     void verfiedNum(){
-        if(numFromGuesser>=1 && numFromGuesser<=100){
+        if(numFromGuesser>=1 && numFromGuesser<=10){
             System.out.println("Verified Number! Move Ahead");
         }
         else{
