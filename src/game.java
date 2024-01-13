@@ -4,7 +4,7 @@ class Guesser {
 
     int guessingNumber(){
         Scanner s = new Scanner(System.in);
-        System.out.println("Guesser! kindly guess the number");
+        System.out.println("Guesser! kindly guess the Number between 1 to 100");
         guessNum = s.nextInt();
         return guessNum;
     }
@@ -29,6 +29,16 @@ class Umpire {
     void collectNumFromGuesser(){
         Guesser g = new Guesser();
         numFromGuesser = g.guessingNumber();
+    }
+    void verfiedNum(){
+        if(numFromGuesser>=1 && numFromGuesser<=100){
+            System.out.println("Verified Number! Move Ahead");
+        }
+        else{
+            System.out.println("Invalid Number!!!");
+            System.out.println("Restart the Game");
+            System.exit(0);
+        }
     }
     void collectNumFromPlayers(){
         Player p1 = new Player();
@@ -76,6 +86,7 @@ public class game {
         System.out.println("Game Started");
         Umpire u = new Umpire();
         u.collectNumFromGuesser();
+        u.verfiedNum();
         u.collectNumFromPlayers();
         u.compare();
 
